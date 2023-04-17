@@ -1,0 +1,27 @@
+.container-select {
+  background-color: var(--White);
+  box-shadow: 0 1px 3px hsl(0, 0%, 52%, 25%);
+  width: 200px;
+  border-radius: 5px;
+}
+.container-select select {
+  border: 0;
+  width: 200px;
+  padding: 17px;
+  border-right: 10px solid transparent;
+  font-weight: 600;
+  background-color: transparent;
+  color: var(--Very-Dark-Blue);
+}
+.container-select select:focus {
+  border: 0;
+  border-right: 1rem solid transparent;
+  outline: 0;
+  color: var(--Very-Dark-Blue);
+}
+
+.container-select option {
+  font-weight: 600;
+  background-color: var(--White);
+  color: var(--Very-Dark-Blue);
+}

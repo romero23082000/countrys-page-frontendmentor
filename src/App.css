@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Blue: hsl(200, 15%, 8%);
+  --Dark-Gray: hsl(0, 0%, 52%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Input-Search: hsl(0, 0%, 52%);
+}
+[data-theme="dark"] {
+  --White: hsl(209, 23%, 22%);
+  --Very-Dark-Blue: hsl(0, 0%, 98%);
+  --Very-Light-Gray: hsl(207, 26%, 17%);
+  --Dark-Gray: hsl(200, 15%, 8%);
+  --Input-Search: hsl(0, 0%, 98%);
+}
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--Very-Light-Gray);
+  transition: all 0.5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: grid;
+  place-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+  width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputs {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.no-data {
+  color: var(--Very-Dark-Blue);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 767px) {
+  .cards {
+    display: flex;
+    justify-content: center;
   }
 }
